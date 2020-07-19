@@ -1,2 +1,0 @@
-# DISC-Assessment
-Bounty task
