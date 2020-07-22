@@ -1,0 +1,22 @@
+{
+	"name": "sheilappasion-disc",
+	"license": "MIT",
+	"private": true,
+	"scripts": {
+		"api": "cross-env process.env.section=api NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --watch --config=node_modules/laravel-mix/setup/webpack.config.js",
+		"srv": "nodemon dist/api.js -q",
+		"dev": "npm-run-all -p api srv"
+	},
+	"devDependencies": {
+		"laravel-mix": "^5.0.4",
+		"ts-loader": "^8.0.1",
+		"typescript": "^3.9.7",
+		"webpack-node-externals": "^2.5.0"
+	},
+	"dependencies": {
+		"@types/koa": "^2.11.3",
+		"@types/koa-static": "^4.0.1",
+		"koa": "^2.13.0",
+		"koa-static": "^5.0.0"
+	}
+}
