@@ -7,9 +7,15 @@ const Router = new VueRouter({ mode: 'history' })
 
 import Page from './index.vue'
 import NotFound from './not-found.vue'
+import Assessment from './assessment.vue'
 
 Router.addRoutes([
-  { path: '/', component: Page },
+  { 
+    path: '/', component: Page,
+    children: [
+      { path: 'assessment' , component: Assessment }
+    ] 
+  },
   { path: '*', component: NotFound }
 ])
 
